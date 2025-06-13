@@ -1,0 +1,44 @@
+# CPA Landing Pages Collection
+
+This repository contains a collection of static landing pages designed for various CPA (Cost Per Action) marketing offers. Each landing page is organized into its own dedicated folder.
+
+---
+
+## **Project Structure**
+
+Each landing page is housed within its own folder, with the main HTML file named `index.html`. This structure is optimized for deployment via platforms like Cloudflare Pages, allowing each offer to be accessed via a unique URL path under the main domain.
+
+Example structure:├── offer-1/
+│   ├── index.html
+│   ├── style.css
+│   └── script.js
+├── health-offer/
+│   ├── index.html
+│   └── main.css
+└── tech-gadget/
+├── index.html
+└── script.js
+
+
+---
+
+## **Deployment**
+
+This collection is intended to be deployed as a static site using Cloudflare Pages. Once deployed, each landing page can be accessed via a URL like `https://yourdomain.com/offer-1`, `https://yourdomain.com/health-offer`, etc.
+
+---
+
+## **How to Use**
+
+1.  **Clone this repository** (or fork it if you want to contribute).
+2.  **Add your landing page files:** Create a new folder for each landing page and place all its assets (HTML, CSS, JS, images) inside. Ensure the main HTML file is named `index.html`.
+3.  **Commit and Push:** Commit your changes to the `main` (or `master`) branch and push them to GitHub.
+4.  **Connect to Cloudflare Pages:** Connect this repository to your Cloudflare Pages account for seamless deployment and global content delivery.
+
+---
+
+## **Disclaimer**
+
+These landing pages are for demonstration and educational purposes related to CPA marketing. Ensure that all offers and content comply with relevant advertising guidelines and legal regulations.
+
+---
