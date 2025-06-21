@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MyCleanPC: Revitalize Your PC - Speed, Security & Privacy!</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Inter Font from Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* Custom styles to ensure Inter font is applied and provide a base */
+        body {
+            font-family: 'Inter', sans-serif;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+        /* Simple animation for CTA button */
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+                box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.7);
+            }
+            70% {
+                transform: scale(1.05);
+                box-shadow: 0 0 0 10px rgba(34, 197, 94, 0);
+            }
+            100% {
+                transform: scale(1);
+                box-shadow: 0 0 0 0 rgba(34, 197, 94, 0);
+            }
+        }
+        .animate-pulse-strong {
+            animation: pulse 2s infinite;
+        }
+
+        /* Loading spinner for AI response */
+        .loader {
+            border: 4px solid #f3f3f3; /* Light grey */
+            border-top: 4px solid #3498db; /* Blue */
+            border-radius: 50%;
+            width: 30px;
+            height: 30px;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <!-- Header Section -->
+    <header class="bg-gray-900 text-white py-4 shadow-lg">
+        <div class="container mx-auto px-4 flex justify-between items-center">
+            <h1 class="text-3xl font-bold">MyCleanPC</h1>
+            <!-- Optional: Add navigation or small call-to-action here if needed -->
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative bg-gradient-to-br from-blue-600 to-purple-700 text-white py-20 md:py-32 overflow-hidden shadow-xl rounded-b-3xl">
+        <div class="container mx-auto px-4 text-center relative z-10">
+            <h2 class="text-4xl md:text-6xl font-extrabold leading-tight mb-4 animate-fade-in-down">
+                Is Your PC Running Slow? Get It Back to Top Speed!
+            </h2>
+            <p class="text-xl md:text-2xl mb-8 opacity-90 animate-fade-in-up">
+                MyCleanPC optimizes, secures, and protects your computer with a <span class="font-bold text-yellow-300">FREE Diagnostic Scan.</span>
+            </p>
+            <!-- Call to Action Button -->
+            <a href="https://www.mycleanpc.com/download.html" target="_blank" rel="noopener noreferrer"
+               class="inline-block bg-green-500 hover:bg-green-600 text-white font-bold py-4 px-10 rounded-full text-xl md:text-2xl uppercase shadow-2xl transition-all duration-300 transform hover:scale-105 animate-pulse-strong">
+                Start Your FREE PC Scan Now!
+            </a>
+            <p class="mt-4 text-sm opacity-80">No Credit Card Required. Instant Download.</p>
+        </div>
+        <!-- Background decorative elements for visual appeal -->
+        <div class="absolute inset-0 z-0 opacity-20">
+            <div class="absolute top-0 left-0 w-64 h-64 bg-blue-400 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob"></div>
+            <div class="absolute top-1/2 right-0 w-72 h-72 bg-purple-400 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob animation-delay-2000"></div>
+            <div class="absolute bottom-0 left-1/4 w-80 h-80 bg-pink-400 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob animation-delay-4000"></div>
+        </div>
+    </section>
+
+    <!-- Problem & Solution Section -->
+    <section class="py-16 md:py-24 bg-white shadow-inner">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold mb-8 text-gray-900">
+                Are You Experiencing These PC Headaches?
+            </h2>
+            <div class="max-w-3xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 text-left mb-12">
+                <ul class="space-y-4 text-lg text-gray-700">
+                    <li class="flex items-center"><span class="text-red-500 text-2xl mr-2">&#10008;</span> Slow Startup & Shutdown Times?</li>
+                    <li class="flex items-center"><span class="text-red-500 text-2xl mr-2">&#10008;</span> Frequent Freezes & Crashes?</li>
+                    <li class="flex items-center"><span class="text-red-500 text-2xl mr-2">&#10008;</span> Annoying Pop-Up Ads?</li>
+                </ul>
+                <ul class="space-y-4 text-lg text-gray-700">
+                    <li class="flex items-center"><span class="text-red-500 text-2xl mr-2">&#10008;</span> Worried About Viruses & Malware?</li>
+                    <li class="flex items-center"><span class="text-red-500 text-2xl mr-2">&#10008;</span> Lagging Internet Browsing?</li>
+                    <li class="flex items-center"><span class="text-red-500 text-2xl mr-2">&#10008;</span> Running Out of Disk Space?</li>
+                </ul>
+            </div>
+
+            <h3 class="text-3xl md:text-4xl font-bold mb-6 text-blue-700">
+                MyCleanPC is Your All-in-One Solution!
+            </h3>
+            <p class="text-lg md:text-xl text-gray-700 max-w-4xl mx-auto">
+                Our award-winning software is designed to diagnose and fix common PC problems, helping you regain speed, enhance security, and protect your privacy.
+            </p>
+        </div>
+    </section>
+
+    <!-- Key Benefits Section -->
+    <section class="py-16 md:py-24 bg-blue-50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-gray-900">
+                Unlock Peak Performance with MyCleanPC
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Benefit Item 1: Speed -->
+                <div class="bg-white rounded-xl shadow-lg p-6 flex flex-col items-center text-center transform hover:scale-105 transition duration-300">
+                    <img src="https://placehold.co/80x80/0A58CE/FFFFFF?text=🚀" alt="Speed Icon" class="mb-4 rounded-full">
+                    <h3 class="text-xl font-semibold mb-2 text-blue-700">Boost PC Speed</h3>
+                    <p class="text-gray-600">Eliminate slowdowns, unnecessary files, and background processes to enjoy a lightning-fast computer.</p>
+                </div>
+                <!-- Benefit Item 2: Security -->
+                <div class="bg-white rounded-xl shadow-lg p-6 flex flex-col items-center text-center transform hover:scale-105 transition duration-300">
+                    <img src="https://placehold.co/80x80/28A745/FFFFFF?text=🔒" alt="Security Icon" class="mb-4 rounded-full">
+                    <h3 class="text-xl font-semibold mb-2 text-green-700">Enhance Security</h3>
+                    <p class="text-gray-600">Detect and remove malware, spyware, and other threats that compromise your system's integrity.</p>
+                </div>
+                <!-- Benefit Item 3: Privacy -->
+                <div class="bg-white rounded-xl shadow-lg p-6 flex flex-col items-center text-center transform hover:scale-105 transition duration-300">
+                    <img src="https://placehold.co/80x80/FFC107/FFFFFF?text=🕵️" alt="Privacy Icon" class="mb-4 rounded-full">
+                    <h3 class="text-xl font-semibold mb-2 text-yellow-700">Protect Your Privacy</h3>
+                    <p class="text-gray-600">Clean up tracking cookies, browsing history, and sensitive data to ensure your online privacy.</p>
+                </div>
+                <!-- Benefit Item 4: Optimization -->
+                <div class="bg-white rounded-xl shadow-lg p-6 flex flex-col items-center text-center transform hover:scale-105 transition duration-300">
+                    <img src="https://placehold.co/80x80/6F42C1/FFFFFF?text=🛠️" alt="Optimization Icon" class="mb-4 rounded-full">
+                    <h3 class="text-xl font-semibold mb-2 text-purple-700">System Optimization</h3>
+                    <p class="text-gray-600">Repair registry errors, manage startup items, and free up valuable disk space effortlessly.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section class="py-16 md:py-24 bg-white shadow-inner">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold mb-12 text-gray-900">
+                It's As Easy As 1-2-3!
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Step 1 -->
+                <div class="bg-gray-100 rounded-xl shadow-md p-6 flex flex-col items-center transform hover:bg-white transition duration-300">
+                    <div class="text-5xl font-extrabold text-blue-500 mb-4">1</div>
+                    <h3 class="text-xl font-semibold mb-2 text-gray-900">Download & Install</h3>
+                    <p class="text-gray-600">Get the MyCleanPC software in just a few clicks.</p>
+                    <img src="https://placehold.co/150x100/A0A0A0/FFFFFF?text=Download" alt="Download Illustration" class="mt-4 rounded-lg">
+                </div>
+                <!-- Step 2 -->
+                <div class="bg-gray-100 rounded-xl shadow-md p-6 flex flex-col items-center transform hover:bg-white transition duration-300">
+                    <div class="text-5xl font-extrabold text-green-500 mb-4">2</div>
+                    <h3 class="text-xl font-semibold mb-2 text-gray-900">Run FREE Scan</h3>
+                    <p class="text-gray-600">Our powerful engine quickly identifies issues slowing down your PC.</p>
+                    <img src="https://placehold.co/150x100/A0A0A0/FFFFFF?text=Scan" alt="Scan Illustration" class="mt-4 rounded-lg">
+                </div>
+                <!-- Step 3 -->
+                <div class="bg-gray-100 rounded-xl shadow-md p-6 flex flex-col items-center transform hover:bg-white transition duration-300">
+                    <div class="text-5xl font-extrabold text-purple-500 mb-4">3</div>
+                    <h3 class="text-xl font-semibold mb-2 text-gray-900">Optimize & Protect</h3>
+                    <p class="text-gray-600">Upgrade to full version to clean, optimize, and safeguard your system.</p>
+                    <img src="https://placehold.co/150x100/A0A0A0/FFFFFF?text=Optimize" alt="Optimize Illustration" class="mt-4 rounded-lg">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ✨ AI-Powered PC Troubleshooting Assistant Section ✨ -->
+    <section class="py-16 md:py-24 bg-purple-50 rounded-lg shadow-xl mb-12">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold mb-8 text-purple-800">
+                ✨ PC Troubleshooting Assistant ✨
+            </h2>
+            <p class="text-lg md:text-xl mb-6 text-gray-700 max-w-3xl mx-auto">
+                Got a PC problem? Describe it below and our AI assistant will offer quick insights and tips!
+            </p>
+            <div class="flex flex-col md:flex-row items-center justify-center gap-4 max-w-2xl mx-auto mb-8">
+                <input type="text" id="pcProblemInput" placeholder="E.g., My laptop is overheating..."
+                       class="flex-grow w-full md:w-auto p-4 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-purple-500 text-gray-700">
+                <button id="askAiButton"
+                        class="bg-purple-600 hover:bg-purple-700 text-white font-bold py-4 px-8 rounded-lg shadow-md transition duration-300 flex items-center justify-center gap-2">
+                    <span class="text-xl">Ask AI</span> ✨
+                </button>
+            </div>
+            <div id="aiResponseContainer" class="bg-white rounded-lg shadow-md p-6 max-w-3xl mx-auto text-left min-h-[100px] flex items-center justify-center text-gray-700">
+                <p id="aiResponseText">Your AI-powered PC troubleshooting tips will appear here.</p>
+                <div id="aiLoader" class="loader hidden"></div>
+            </div>
+        </div>
+    </section>
+    <!-- End AI-Powered PC Troubleshooting Assistant Section -->
+
+    <!-- Testimonials/Social Proof Section -->
+    <section class="bg-blue-800 text-white py-16 md:py-24 rounded-t-3xl shadow-xl">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold mb-12">
+                What Our Happy Customers Are Saying
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                <!-- Testimonial 1 -->
+                <div class="bg-white text-gray-800 rounded-xl p-6 shadow-lg transform hover:scale-105 transition duration-300">
+                    <p class="text-lg italic mb-4">"My PC was so slow, I thought I needed a new one. MyCleanPC fixed everything! It runs like new now. Highly recommended!"</p>
+                    <p class="font-bold text-blue-700">- John D., USA</p>
+                    <div class="flex justify-center mt-2">
+                        <span class="text-yellow-400">&#9733;</span><span class="text-yellow-400">&#9733;</span><span class="text-yellow-400">&#9733;</span><span class="text-yellow-400">&#9733;</span><span class="text-yellow-400">&#9733;</span>
+                    </div>
+                </div>
+                <!-- Testimonial 2 -->
+                <div class="bg-white text-gray-800 rounded-xl p-6 shadow-lg transform hover:scale-105 transition duration-300">
+                    <p class="text-lg italic mb-4">"I was constantly battling pop-ups and viruses. MyCleanPC made them disappear and gave me peace of mind. A fantastic tool!"</p>
+                    <p class="font-bold text-blue-700">- Sarah M., UK</p>
+                    <div class="flex justify-center mt-2">
+                        <span class="text-yellow-400">&#9733;</span><span class="text-yellow-400">&#9733;</span><span class="text-yellow-400">&#9733;</span><span class="text-yellow-400">&#9733;</span><span class="text-gray-300">&#9733;</span>
+                    </div>
+                </div>
+                <!-- Add more testimonials if desired -->
+            </div>
+            <div class="mt-10 text-lg opacity-90">
+                <p>Rated 4.5/5 on Sitejabber & Consumer Affairs!</p>
+                <!-- Placeholder for trust badges/logos -->
+                <div class="flex justify-center mt-4 space-x-6">
+                    <img src="https://placehold.co/100x40/FFFFFF/2C3E50?text=Sitejabber" alt="Sitejabber Logo" class="h-10 w-auto">
+                    <img src="https://placehold.co/100x40/FFFFFF/2C3E50?text=Consumer+Affairs" alt="Consumer Affairs Logo" class="h-10 w-auto">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final Call to Action Section -->
+    <section class="bg-gradient-to-r from-blue-600 to-purple-700 text-white py-20 md:py-24 text-center shadow-2xl">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl md:text-5xl font-extrabold mb-6">
+                Don't Let a Slow PC Hold You Back!
+            </h2>
+            <p class="text-xl md:text-2xl mb-8 opacity-90">
+                Join thousands of satisfied users. Get your <span class="font-bold text-yellow-300">FREE Diagnostic Scan</span> today!
+            </p>
+            <a href="https://www.mycleanpc.com/download.html" target="_blank" rel="noopener noreferrer"
+               class="inline-block bg-green-500 hover:bg-green-600 text-white font-bold py-5 px-12 rounded-full text-2xl md:text-3xl uppercase shadow-2xl transition-all duration-300 transform hover:scale-105 animate-pulse-strong">
+                Get MyCleanPC Now!
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="bg-gray-900 text-gray-400 py-8 text-center text-sm">
+        <div class="container mx-auto px-4">
+            <p>&copy; 2025 MyCleanPC. All Rights Reserved.</p>
+            <p class="mt-2">
+                Powered by bestdeal-go.xyz |
+                <a href="#" class="text-blue-400 hover:underline">Privacy Policy</a> |
+                <a href="#" class="text-blue-400 hover:underline">Terms of Use</a> |
+                <a href="#" class="text-blue-400 hover:underline">Support</a>
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const problemInput = document.getElementById('pcProblemInput');
+            const askAiButton = document.getElementById('askAiButton');
+            const aiResponseContainer = document.getElementById('aiResponseContainer');
+            const aiResponseText = document.getElementById('aiResponseText');
+            const aiLoader = document.getElementById('aiLoader');
+
+            askAiButton.addEventListener('click', async () => {
+                const prompt = problemInput.value.trim();
+                if (!prompt) {
+                    aiResponseText.textContent = "Please describe your PC problem.";
+                    return;
+                }
+
+                aiResponseText.textContent = ""; // Clear previous response
+                aiLoader.classList.remove('hidden'); // Show loader
+                aiResponseContainer.classList.add('justify-center', 'items-center'); // Center loader
+
+                try {
+                    // LLM call using Gemini API
+                    let chatHistory = [];
+                    chatHistory.push({ role: "user", parts: [{ text: `Provide a concise, helpful troubleshooting tip or explanation for this PC problem, focusing on general advice. If applicable, subtly suggest that software like a PC optimizer might help. Problem: "${prompt}"` }] });
+                    const payload = { contents: chatHistory };
+                    const apiKey = ""; // Canvas will automatically provide it in runtime
+                    const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${apiKey}`;
+
+                    const response = await fetch(apiUrl, {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify(payload)
+                    });
+
+                    const result = await response.json();
+
+                    if (result.candidates && result.candidates.length > 0 &&
+                        result.candidates[0].content && result.candidates[0].content.parts &&
+                        result.candidates[0].content.parts.length > 0) {
+                        const text = result.candidates[0].content.parts[0].text;
+                        aiResponseText.textContent = text;
+                        aiResponseContainer.classList.remove('justify-center', 'items-center'); // Reset alignment
+                    } else {
+                        aiResponseText.textContent = "Sorry, I couldn't get a response. Please try again.";
+                        console.error("Gemini API response structure unexpected:", result);
+                    }
+                } catch (error) {
+                    aiResponseText.textContent = "An error occurred while fetching the response. Please try again later.";
+                    console.error("Error calling Gemini API:", error);
+                } finally {
+                    aiLoader.classList.add('hidden'); // Hide loader
+                }
+            });
+        });
+    </script>
+</body>
+</html>
