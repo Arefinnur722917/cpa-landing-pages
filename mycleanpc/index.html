@@ -289,11 +289,10 @@
                 aiResponseContainer.classList.add('justify-center', 'items-center'); // Center loader
 
                 try {
-                    // It's crucial to replace 'YOUR_GEMINI_API_KEY' with your actual API Key.
-                    // Get your API Key from Google AI Studio: https://aistudio.google.com/app/apikey
-                    const apiKey = "AIzaSyBkt7xlMJ81cZjdgk25O9DSQwhZhcZv1Pk"; // <--- Your provided API Key
+                    // Your provided API Key is used here.
+                    const apiKey = "AIzaSyBkt7xlMJ81cZjdgk25O9DSQwhZhcZv1Pk"; 
 
-                    if (apiKey === "" || apiKey === "YOUR_GEMINI_API_KEY") { // Added check for generic placeholder
+                    if (apiKey === "" || apiKey === "YOUR_GEMINI_API_KEY") { 
                         aiResponseText.textContent = "Error: Gemini API Key is missing. Please replace 'YOUR_GEMINI_API_KEY' in the code with your actual API key.";
                         console.error("Gemini API Key is not set.");
                         return;
