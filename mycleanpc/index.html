@@ -247,7 +247,7 @@
                 Don't Let a Slow PC Hold You Back!
             </h2>
             <p class="text-xl md:text-2xl mb-8 opacity-90">
-                Join thousands of satisfied users. Get your <span class="font-bold text-yellow-300">FREE Diagnostic Scan</span> today!
+                Join thousands of satisfied users. Get your <span class="font-bold text-yellow-300">FREE Diagnostic Scan.</span> today!
             </p>
             <a href="https://www.mycleanpc.com/download.html" target="_blank" rel="noopener noreferrer"
                class="inline-block bg-green-500 hover:bg-green-600 text-white font-bold py-5 px-12 rounded-full text-2xl md:text-3xl uppercase shadow-2xl transition-all duration-300 transform hover:scale-105 animate-pulse-strong">
@@ -289,11 +289,20 @@
                 aiResponseContainer.classList.add('justify-center', 'items-center'); // Center loader
 
                 try {
+                    // It's crucial to replace 'YOUR_GEMINI_API_KEY' with your actual API Key.
+                    // Get your API Key from Google AI Studio: https://aistudio.google.com/app/apikey
+                    const apiKey = "AIzaSyBkt7xlMJ81cZjdgk25O9DSQwhZhcZv1Pk"; // <--- Your provided API Key
+
+                    if (apiKey === "" || apiKey === "YOUR_GEMINI_API_KEY") { // Added check for generic placeholder
+                        aiResponseText.textContent = "Error: Gemini API Key is missing. Please replace 'YOUR_GEMINI_API_KEY' in the code with your actual API key.";
+                        console.error("Gemini API Key is not set.");
+                        return;
+                    }
+
                     // LLM call using Gemini API
                     let chatHistory = [];
                     chatHistory.push({ role: "user", parts: [{ text: `Provide a concise, helpful troubleshooting tip or explanation for this PC problem, focusing on general advice. If applicable, subtly suggest that software like a PC optimizer might help. Problem: "${prompt}"` }] });
                     const payload = { contents: chatHistory };
-                    const apiKey = ""; // Canvas will automatically provide it in runtime
                     const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${apiKey}`;
 
                     const response = await fetch(apiUrl, {
