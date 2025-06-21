@@ -300,7 +300,9 @@
 
                     // LLM call using Gemini API
                     let chatHistory = [];
-                    chatHistory.push({ role: "user", parts: [{ text: `Provide a concise, helpful troubleshooting tip or explanation for this PC problem, focusing on general advice. If applicable, subtly suggest that software like a PC optimizer might help. Problem: "${prompt}"` }] });
+                    // IMPROVED PROMPT: Requesting more actionable and less generic advice.
+                    chatHistory.push({ role: "user", parts: [{ text: `For the following PC problem, provide 2-3 concise, actionable troubleshooting steps or common solutions. Avoid generic phrases and get straight to practical advice. If relevant, briefly mention how PC optimization software can help. Problem: "${prompt}"` }] });
+                    
                     const payload = { contents: chatHistory };
                     const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${apiKey}`;
 
