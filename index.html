@@ -1,234 +1,359 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>BestDeals-Go | Trusted Affiliate Marketplace</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Inter', sans-serif;
-      background-color: #ffffff;
-      color: #2c3e50;
-      line-height: 1.6;
-    }
-    header {
-      background: linear-gradient(90deg, #004aad, #00b4d8);
-      color: white;
-      padding: 80px 20px 100px 20px;
-      text-align: center;
-      background-image: url('https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=1470&q=80');
-      background-size: cover;
-      background-position: center;
-      position: relative;
-    }
-    header::after {
-      content: "";
-      position: absolute;
-      top: 0; left: 0; right: 0; bottom: 0;
-      background: rgba(0, 0, 0, 0.5);
-      z-index: 0;
-    }
-    header h1, header p {
-      position: relative;
-      z-index: 1;
-    }
-    header h1 {
-      font-size: 3.5rem;
-      font-weight: 800;
-      margin: 0;
-      text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.7);
-    }
-    header p {
-      font-size: 1.5rem;
-      margin-top: 15px;
-      color: #e0f7fa;
-      text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6);
-    }
-    .container {
-      max-width: 1200px;
-      margin: auto;
-      padding: 40px 20px;
-    }
-    section {
-      margin-bottom: 50px;
-    }
-    h2 {
-      color: #004aad;
-      font-size: 2.2rem;
-      margin-bottom: 15px;
-    }
-    .highlight {
-      font-family: 'Playfair Display', serif;
-      font-size: 1.5rem;
-      font-weight: bold;
-      color: #003366;
-      margin-top: 20px;
-    }
-    .features, .offer-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 20px;
-      margin-top: 20px;
-    }
-    .feature, .offer-card {
-      background-color: #f1f5f9;
-      padding: 20px;
-      border-radius: 8px;
-      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-    }
-    .reviews {
-      margin-top: 20px;
-      display: flex;
-      flex-direction: column;
-      gap: 25px;
-    }
-    .review {
-      display: flex;
-      align-items: flex-start;
-      background-color: #f1f5f9;
-      padding: 20px;
-      border-radius: 8px;
-      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-      gap: 15px;
-    }
-    .review img {
-      width: 70px;
-      height: 70px;
-      border-radius: 50%;
-      object-fit: cover;
-      flex-shrink: 0;
-      box-shadow: 0 0 6px rgba(0,0,0,0.1);
-    }
-    .review-content {
-      flex: 1;
-    }
-    .review-text {
-      font-size: 1.1rem;
-      color: #2c3e50;
-      margin-bottom: 10px;
-      font-style: italic;
-    }
-    .reviewer-info {
-      font-size: 0.85rem;
-      color: #666666;
-      font-weight: 600;
-    }
-    footer {
-      background-color: #eceff1;
-      padding: 30px 20px;
-      text-align: center;
-      font-size: 0.9rem;
-      color: #607d8b;
-    }
-    a {
-      color: #004aad;
-      text-decoration: none;
-    }
-    a:hover {
-      text-decoration: underline;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BestDeals-Go: Your Gateway to Top Online Offers</title>
+    <!-- MyLead verification meta tag - REMEMBER TO REPLACE CONTENT WITH YOUR UNIQUE ID -->
+    <meta name="mylead-verification" content="YOUR_UNIQUE_MYLEAD_VERIFICATION_CODE_HERE">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts - Inter for modern look -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f3f4f6; /* Light gray background */
+            color: #374151; /* Darker text for readability */
+        }
+        /* Custom scroll behavior for smooth navigation */
+        html {
+            scroll-behavior: smooth;
+        }
+        /* Hide scrollbar for a cleaner look, but keep functionality */
+        body::-webkit-scrollbar {
+            display: none;
+        }
+        body {
+            -ms-overflow-style: none;  /* IE and Edge */
+            scrollbar-width: none;  /* Firefox */
+        }
+    </style>
 </head>
-<body>
-  <header>
-    <h1>BestDeals-Go</h1>
-    <p>Your Trusted Destination for Affiliate Offers & Smart Deals</p>
-  </header>
+<body class="antialiased">
 
-  <div class="container">
-    <section>
-      <h2>Welcome to BestDeals-Go</h2>
-      <p>
-        BestDeals-Go is a professional and legally compliant affiliate marketing website dedicated to promoting valuable offers through well-structured landing pages. We are committed to providing authentic affiliate deals that are both ethical and highly converting. We promote a variety of popular categories such as software tools, digital health, finance, and productivity enhancers.
-      </p>
-      <p>
-        Our platform is built with trust, transparency, and user experience in mind. Every offer you find here is vetted, secured, and compliant with global affiliate and CPA standards.
-      </p>
-    </section>
-
-    <section>
-      <h2>Core Values</h2>
-      <ul>
-        <li><strong>✅ Honesty First:</strong> We promote only what’s real and effective.</li>
-        <li><strong>✅ Legal Compliance:</strong> We follow all CPA network rules and standards.</li>
-        <li><strong>✅ Respect for Privacy:</strong> User data is never compromised.</li>
-        <li><strong>✅ Transparent Earnings:</strong> Full disclosure of affiliate relationships.</li>
-      </ul>
-    </section>
-
-    <section>
-      <h2>Types of Offers We Promote</h2>
-      <ul>
-        <li>System Optimizers</li>
-        <li>Credit Score Tools</li>
-        <li>Online Therapy Platforms</li>
-        <li>Language Learning Apps</li>
-        <li>Fitness & Health Trials</li>
-        <li>Antivirus Software</li>
-        <li>VPN & Privacy Protection</li>
-        <li>Survey Reward Programs</li>
-        <li>Work-from-Home Opportunities</li>
-        <li>Educational Aid Finders</li>
-      </ul>
-      <p>We promote many such curated affiliate offers through dedicated landing pages.</p>
-    </section>
-
-    <section>
-      <h2 class="highlight">"Serve with honesty. Promote with pride. Grow with trust."</h2>
-      <h2 class="highlight">"Every click must build credibility."</h2>
-      <h2 class="highlight">"Build income the right way – ethically and consistently."</h2>
-      <h2 class="highlight">"Those who visit BestDeals-Go always leave with value."</h2>
-      <h2 class="highlight">"Real offers. Real benefits. Real trust."</h2>
-      <h2 class="highlight">"We don’t just promote – we guide you to the best."</h2>
-      <h2 class="highlight">"Affiliate marketing done right means success for everyone."</h2>
-    </section>
-
-    <section>
-      <h2>What Our Users Say</h2>
-      <div class="reviews">
-        <div class="review">
-          <img src="https://randomuser.me/api/portraits/men/31.jpg" alt="Michael" />
-          <div class="review-content">
-            <p class="review-text">“A great platform to find secure and verified deals. Highly recommended!”</p>
-            <p class="reviewer-info">Michael (USA) | michael1985@gmail.com</p>
-          </div>
+    <!-- Header Section -->
+    <header class="bg-white shadow-sm py-4 fixed w-full z-10 top-0">
+        <div class="container mx-auto px-4 flex justify-between items-center">
+            <a href="#home" class="flex items-center rounded-lg p-2 transition duration-300 hover:bg-blue-50">
+                
+                <img src="bestdealsgo logo.png" alt="BestDeals-Go Logo" class="h-8 md:h-10 mr-2"> 
+                <span class="text-2xl font-extrabold text-blue-600">BestDeals-Go</span>
+            </a>
+            <nav class="hidden md:flex space-x-6">
+                <a href="#offers" class="text-gray-700 hover:text-blue-600 font-medium transition duration-300 rounded-lg p-2 hover:bg-gray-100">Our Offers</a>
+                <a href="#about" class="text-gray-700 hover:text-blue-600 font-medium transition duration-300 rounded-lg p-2 hover:bg-gray-100">About Us</a>
+                <a href="#testimonials" class="text-gray-700 hover:text-blue-600 font-medium transition duration-300 rounded-lg p-2 hover:bg-gray-100">Testimonials</a>
+                <a href="#contact" class="text-gray-700 hover:text-blue-600 font-medium transition duration-300 rounded-lg p-2 hover:bg-gray-100">Contact</a>
+                <a href="#privacy" class="text-gray-700 hover:text-blue-600 font-medium transition duration-300 rounded-lg p-2 hover:bg-gray-100">Privacy Policy</a>
+            </nav>
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-button" class="md:hidden text-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500 rounded-lg p-2">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+            </button>
         </div>
-        <div class="review">
-          <img src="https://randomuser.me/api/portraits/women/64.jpg" alt="Emily" />
-          <div class="review-content">
-            <p class="review-text">“Very helpful site with genuine promotions.Very helpful!”</p>
-            <p class="reviewer-info">Emily (Canada) | emilyca98@gmail.com</p>
-          </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white py-2 shadow-md">
+            <nav class="flex flex-col items-center space-y-2">
+                <a href="#offers" class="block text-gray-700 hover:text-blue-600 font-medium py-2 w-full text-center rounded-lg hover:bg-gray-100">Our Offers</a>
+                <a href="#about" class="block text-gray-700 hover:text-blue-600 font-medium py-2 w-full text-center rounded-lg hover:bg-gray-100">About Us</a>
+                <a href="#testimonials" class="block text-gray-700 hover:text-blue-600 font-medium py-2 w-full text-center rounded-lg hover:bg-gray-100">Testimonials</a>
+                <a href="#contact" class="block text-gray-700 hover:text-blue-600 font-medium py-2 w-full text-center rounded-lg hover:bg-gray-100">Contact</a>
+                <a href="#privacy" class="block text-gray-700 hover:text-blue-600 font-medium py-2 w-full text-center rounded-lg hover:bg-gray-100">Privacy Policy</a>
+            </nav>
         </div>
-        <div class="review">
-          <img src="https://randomuser.me/api/portraits/men/75.jpg" alt="Johan" />
-          <div class="review-content">
-            <p class="review-text">“Simple and trustworthy affiliate links.BestDeals-Go helped me discover amazing trial offers.Trustworthy platform!”</p>
-            <p class="reviewer-info">Johan (Netherlands) | johaneu909@gmail.com</p>
-          </div>
+    </header>
+
+    <main class="pt-16"> <!-- Adjusted padding-top to account for fixed header -->
+
+        <!-- Hero Section -->
+        <section id="home" class="relative bg-gradient-to-r from-blue-600 to-purple-600 text-white py-20 md:py-32 overflow-hidden rounded-b-lg shadow-xl">
+            <div class="container mx-auto px-4 text-center relative z-10">
+                <h1 class="text-4xl md:text-6xl font-extrabold leading-tight mb-6 animate-fade-in-down">
+                    Unlock Premium Deals, <span class="text-yellow-300">Simplified for You.</span>
+                </h1>
+                <p class="text-lg md:text-xl max-w-2xl mx-auto mb-10 opacity-90 animate-fade-in-up">
+                    BestDeals-Go is your trusted gateway to carefully vetted, authentic, and high-value online offers. From powerful software to exciting giveaways, we connect you to the best.
+                </p>
+                <a href="#offers" class="inline-block bg-white text-blue-600 font-bold py-3 px-8 rounded-full shadow-lg hover:bg-gray-100 transform hover:scale-105 transition duration-300 animate-fade-in-up">
+                    Explore Our Top Offers Today!
+                </a>
+            </div>
+            <!-- Background Blob/Shape for aesthetics -->
+            <div class="absolute inset-0 z-0">
+                <div class="w-80 h-80 bg-white opacity-10 rounded-full absolute -top-20 -left-20 animate-pulse"></div>
+                <div class="w-60 h-60 bg-white opacity-10 rounded-full absolute -bottom-10 -right-10 animate-pulse-slow"></div>
+            </div>
+        </section>
+
+        <!-- Values/Trust Section -->
+        <section class="py-16 bg-white rounded-lg shadow-md mx-auto max-w-6xl -mt-8 relative z-10 px-4 mb-12">
+            <div class="container mx-auto text-center">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-10">Why Choose BestDeals-Go?</h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="p-6 bg-gray-50 rounded-xl shadow-md transform hover:scale-105 transition duration-300 ease-in-out">
+                        <div class="text-blue-500 mb-4">
+                            <svg class="w-12 h-12 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.007 12.007 0 002 12c0 2.75 1.118 5.26 2.929 7.071L12 22l7.071-7.071A12.007 12.007 0 0022 12c0-2.75-1.118-5.26-2.929-7.071z"></path></svg>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-800 mb-3">Authentic & Vetted Offers</h3>
+                        <p class="text-gray-600">Every deal is meticulously checked for legitimacy, value, and compliance, ensuring you get only the best.</p>
+                    </div>
+                    <div class="p-6 bg-gray-50 rounded-xl shadow-md transform hover:scale-105 transition duration-300 ease-in-out">
+                        <div class="text-blue-500 mb-4">
+                            <svg class="w-12 h-12 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 14v3m4-3v3m4-3v3M18 10h4M4 10h4m-4 6H4m12 0h4m-4 6v-3m4-3v3m-8 3V14m-4 3v-3m4 0H4m12 0h4m-4 3v-3m4 3v-3"></path></svg>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-800 mb-3">Transparency & Trust</h3>
+                        <p class="text-gray-600">We believe in clear communication. No hidden fees, no deceptive practices – just honest recommendations.</p>
+                    </div>
+                    <div class="p-6 bg-gray-50 rounded-xl shadow-md transform hover:scale-105 transition duration-300 ease-in-out">
+                        <div class="text-blue-500 mb-4">
+                            <svg class="w-12 h-12 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-800 mb-3">Seamless Experience</h3>
+                        <p class="text-gray-600">Our user-friendly platform ensures a smooth journey from discovery to offer engagement.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Offers Section -->
+        <section id="offers" class="py-16 bg-gray-100 px-4">
+            <div class="container mx-auto text-center">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-10">Explore Our Diverse Offers</h2>
+                <p class="text-lg text-gray-700 mb-12 max-w-3xl mx-auto">
+                    We bring you top-tier opportunities across various categories. Find the perfect solution or an exciting chance to win!
+                </p>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Offer Card 1: Software & Services (System Optimizers) -->
+                    <div class="bg-white rounded-xl shadow-lg p-6 flex flex-col items-center text-center transform hover:scale-105 transition duration-300">
+                        <img src="https://placehold.co/120x120/a8dadc/1d3557?text=Software" alt="Software Icon" class="mb-4 rounded-full">
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Software & Services</h3>
+                        <p class="text-gray-600 mb-4">Discover essential software for system optimization, digital security, and boosting your productivity.</p>
+                        <a href="https://bestdeals-go.xyz/mycleanpc/" target="_blank" class="mt-auto bg-blue-600 text-white font-semibold py-2 px-6 rounded-full shadow-md hover:bg-blue-700 transition duration-300">
+                            Explore Now
+                        </a>
+                    </div>
+                    <!-- Offer Card 2: Surveys & Sweepstakes -->
+                    <div class="bg-white rounded-xl shadow-lg p-6 flex flex-col items-center text-center transform hover:scale-105 transition duration-300">
+                        <img src="https://placehold.co/120x120/fee440/e63946?text=Prizes" alt="Prize Icon" class="mb-4 rounded-full">
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Surveys & Sweepstakes</h3>
+                        <p class="text-gray-600 mb-4">Participate in engaging surveys and enter exciting sweepstakes for a chance to win amazing prizes.</p>
+                        <a href="https://bestdeals-go.xyz/sweepstakesiii/" target="_blank" class="mt-auto bg-purple-600 text-white font-semibold py-2 px-6 rounded-full shadow-md hover:bg-purple-700 transition duration-300">
+                            Claim Free Entry
+                        </a>
+                    </div>
+                    <!-- Offer Card 3: E-commerce -->
+                    <div class="bg-white rounded-xl shadow-lg p-6 flex flex-col items-center text-center transform hover:scale-105 transition duration-300">
+                        <img src="https://placehold.co/120x120/f77f00/fff?text=Shop" alt="E-commerce Icon" class="mb-4 rounded-full">
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">E-commerce Deals</h3>
+                        <p class="text-gray-600 mb-4">Find exclusive discounts and deals on a wide range of products from top online stores.</p>
+                        <a href="#" class="mt-auto bg-gray-400 text-white font-semibold py-2 px-6 rounded-full shadow-md cursor-not-allowed">
+                            Coming Soon
+                        </a>
+                    </div>
+                    <!-- Offer Card 4: Finance -->
+                    <div class="bg-white rounded-xl shadow-lg p-6 flex flex-col items-center text-center transform hover:scale-105 transition duration-300">
+                        <img src="https://placehold.co/120x120/ffbe0b/3d405b?text=Finance" alt="Finance Icon" class="mb-4 rounded-full">
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Finance Solutions</h3>
+                        <p class="text-gray-600 mb-4">Explore smart financial tools, credit score improvement programs, and investment opportunities.</p>
+                        <a href="#" class="mt-auto bg-gray-400 text-white font-semibold py-2 px-6 rounded-full shadow-md cursor-not-allowed">
+                            Coming Soon
+                        </a>
+                    </div>
+                    <!-- Offer Card 5: Education & E-learning -->
+                    <div class="bg-white rounded-xl shadow-lg p-6 flex flex-col items-center text-center transform hover:scale-105 transition duration-300">
+                        <img src="https://placehold.co/120x120/48cae4/03045e?text=Learn" alt="Education Icon" class="mb-4 rounded-full">
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Education & E-learning</h3>
+                        <p class="text-gray-600 mb-4">Expand your knowledge and skills with top online courses, certifications, and educational resources.</p>
+                        <a href="#" class="mt-auto bg-gray-400 text-white font-semibold py-2 px-6 rounded-full shadow-md cursor-not-allowed">
+                            Coming Soon
+                        </a>
+                    </div>
+                    <!-- Offer Card 6: Entertainment (Non-Gambling) -->
+                    <div class="bg-white rounded-xl shadow-lg p-6 flex flex-col items-center text-center transform hover:scale-105 transition duration-300">
+                        <img src="https://placehold.co/120x120/fdc500/fff?text=Fun" alt="Entertainment Icon" class="mb-4 rounded-full">
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Entertainment</h3>
+                        <p class="text-gray-600 mb-4">Discover exciting entertainment options, streaming services, and recreational activities.</p>
+                        <a href="#" class="mt-auto bg-gray-400 text-white font-semibold py-2 px-6 rounded-full shadow-md cursor-not-allowed">
+                            Coming Soon
+                        </a>
+                    </div>
+                    <!-- Offer Card 7: Health & Beauty -->
+                    <div class="bg-white rounded-xl shadow-lg p-6 flex flex-col items-center text-center transform hover:scale-105 transition duration-300">
+                        <img src="https://placehold.co/120x120/90be6d/f8f9fa?text=Health" alt="Health Icon" class="mb-4 rounded-full">
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Health & Beauty</h3>
+                        <p class="text-gray-600 mb-4">Access top offers for wellness products, fitness programs, and beauty solutions for a better you.</p>
+                        <a href="#" class="mt-auto bg-gray-400 text-white font-semibold py-2 px-6 rounded-full shadow-md cursor-not-allowed">
+                            Coming Soon
+                        </a>
+                    </div>
+                    <!-- Offer Card 8: Travel -->
+                    <div class="bg-white rounded-xl shadow-lg p-6 flex flex-col items-center text-center transform hover:scale-105 transition duration-300">
+                        <img src="https://placehold.co/120x120/d90429/edf2f4?text=Travel" alt="Travel Icon" class="mb-4 rounded-full">
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Travel Deals</h3>
+                        <p class="text-gray-600 mb-4">Find amazing deals on flights, hotels, vacation packages, and travel experiences worldwide.</p>
+                        <a href="#" class="mt-auto bg-gray-400 text-white font-semibold py-2 px-6 rounded-full shadow-md cursor-not-allowed">
+                            Coming Soon
+                        </a>
+                    </div>
+                     <!-- Offer Card 9: Pet Care & Related Products -->
+                     <div class="bg-white rounded-xl shadow-lg p-6 flex flex-col items-center text-center transform hover:scale-105 transition duration-300">
+                        <img src="https://placehold.co/120x120/606c38/fefae0?text=Pets" alt="Pet Care Icon" class="mb-4 rounded-full">
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Pet Care & Products</h3>
+                        <p class="text-gray-600 mb-4">Everything for your beloved pets – from nutritious food and toys to essential health supplies.</p>
+                        <a href="#" class="mt-auto bg-gray-400 text-white font-semibold py-2 px-6 rounded-full shadow-md cursor-not-allowed">
+                            Coming Soon
+                        </a>
+                    </div>
+                     <!-- Offer Card 10: House & Garden -->
+                     <div class="bg-white rounded-xl shadow-lg p-6 flex flex-col items-center text-center transform hover:scale-105 transition duration-300">
+                        <img src="https://placehold.co/120x120/bb3e03/fff?text=Home" alt="House & Garden Icon" class="mb-4 rounded-full">
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">House & Garden</h3>
+                        <p class="text-gray-600 mb-4">Enhance your living space with deals on home decor, garden tools, and essential household items.</p>
+                        <a href="#" class="mt-auto bg-gray-400 text-white font-semibold py-2 px-6 rounded-full shadow-md cursor-not-allowed">
+                            Coming Soon
+                        </a>
+                    </div>
+                     <!-- Offer Card 11: Sports & Hobby -->
+                     <div class="bg-white rounded-xl shadow-lg p-6 flex flex-col items-center text-center transform hover:scale-105 transition duration-300">
+                        <img src="https://placehold.co/120x120/2a9d8f/fff?text=Sport" alt="Sports & Hobby Icon" class="mb-4 rounded-full">
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Sports & Hobby</h3>
+                        <p class="text-gray-600 mb-4">Fuel your passions with deals on sports equipment, hobby supplies, and outdoor gear.</p>
+                        <a href="#" class="mt-auto bg-gray-400 text-white font-semibold py-2 px-6 rounded-full shadow-md cursor-not-allowed">
+                            Coming Soon
+                        </a>
+                    </div>
+                     <!-- Offer Card 12: Business Solutions -->
+                     <div class="bg-white rounded-xl shadow-lg p-6 flex flex-col items-center text-center transform hover:scale-105 transition duration-300">
+                        <img src="https://placehold.co/120x120/264653/fff?text=Biz" alt="Business Solutions Icon" class="mb-4 rounded-full">
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Business Solutions</h3>
+                        <p class="text-gray-600 mb-4">Discover tools and services designed to streamline your business operations and boost productivity.</p>
+                        <a href="#" class="mt-auto bg-gray-400 text-white font-semibold py-2 px-6 rounded-full shadow-md cursor-not-allowed">
+                            Coming Soon
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Us Section -->
+        <section id="about" class="py-16 bg-white px-4">
+            <div class="container mx-auto text-center max-w-4xl">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-8">About BestDeals-Go</h2>
+                <p class="text-lg text-gray-700 mb-6">
+                    BestDeals-Go is a professional and legally compliant affiliate marketing website dedicated to promoting valuable offers through well-structured landing pages. We are committed to providing authentic affiliate deals that are both ethical and highly converting. We promote a comprehensive variety of popular categories, including software & services, e-commerce, finance, education & e-learning, entertainment (non-gambling), health & beauty, travel, pet care & related products, house & garden, sports & hobbies, business solutions, and surveys & sweepstakes.
+                </p>
+                <p class="text-lg text-gray-700 mb-6">
+                    Our platform is built with trust, transparency, and user experience in mind. Every offer you find here is meticulously vetted, secured, and compliant with global affiliate and CPA standards,ensuring legitimacy and reliability. Our rigorous due diligence process ensures that only the most genuine and beneficial opportunities reach our users.
+                </p>
+                <p class="text-lg text-gray-700">
+                    Our commitment extends to empowering users to make informed decisions without encountering deceptive practices or hidden costs. Your digital safety, privacy, and satisfaction remain our paramount priorities as we continuously curate and update our selection to deliver only the best and most reliable deals available online.
+                </p>
+            </div>
+        </section>
+
+        <!-- Testimonials Section -->
+        <section id="testimonials" class="py-16 bg-gray-200 px-4">
+            <div class="container mx-auto text-center">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-10">What Our Users Say</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Testimonial 1 -->
+                    <div class="bg-white p-8 rounded-xl shadow-lg transform hover:scale-105 transition duration-300">
+                        <p class="text-lg italic text-gray-700 mb-4">"BestDeals-Go truly delivers! I found exactly what I needed for my PC, and the sweepstakes offers are genuinely exciting. Highly recommended!"</p>
+                        <p class="font-semibold text-blue-600">- David P., Tech Enthusiast</p>
+                    </div>
+                    <!-- Testimonial 2 -->
+                    <div class="bg-white p-8 rounded-xl shadow-lg transform hover:scale-105 transition duration-300">
+                        <p class="text-lg italic text-gray-700 mb-4">"Finally, a trustworthy site for online offers. The transparency here is refreshing, and the deals are top-notch. A must-bookmark!"</p>
+                        <p class="font-semibold text-blue-600">- Maria S., Savvy Shopper</p>
+                    </div>
+                    <!-- Testimonial 3 -->
+                    <div class="bg-white p-8 rounded-xl shadow-lg transform hover:scale-105 transition duration-300">
+                        <p class="text-lg italic text-gray-700 mb-4">"Their selection of health and productivity apps is fantastic. Plus, the chance to win prizes adds a fun element. Great work!"</p>
+                        <p class="font-semibold text-blue-600">- Alex R., Digital Nomad</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="py-16 bg-white px-4">
+            <div class="container mx-auto text-center max-w-xl">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-8">Get In Touch</h2>
+                <p class="text-lg text-gray-700 mb-8">
+                    Have questions or need assistance? Feel free to reach out to us. We're here to help!
+                </p>
+                <div class="bg-gray-50 p-8 rounded-xl shadow-lg">
+                    <p class="text-gray-700 mb-4">Email: <a href="mailto:contact@bestdeals-go.xyz" class="text-blue-600 hover:underline">contact@bestdeals-go.xyz</a></p>
+                    <!-- Removed Business Hours line -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Privacy Policy Section -->
+        <section id="privacy" class="py-16 bg-gray-100 px-4">
+            <div class="container mx-auto text-center max-w-4xl">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-8">Privacy Policy</h2>
+                <p class="text-lg text-gray-700 mb-6">
+                    We respect your privacy. BestDeals-Go adheres to stringent data protection practices to ensure your online experience is secure and private.
+                </p>
+                <ul class="text-left text-gray-600 list-disc list-inside space-y-2 mb-6">
+                    <li>We do not collect unnecessary user data. Our primary focus is on connecting you with valuable offers ethically.</li>
+                    <li>Affiliate links are redirected securely through verified CPA networks only, ensuring your data is handled with integrity.</li>
+                    <li>All information handled by our platform is processed and protected according to global data protection standards and best practices.</li>
+                </ul>
+                <p class="text-lg text-gray-700 mt-6">
+                    By using our website, you signify your agreement to this Privacy Policy. We are committed to maintaining the highest standards of transparency and trust.
+                </p>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer Section -->
+    <footer class="bg-gray-800 text-white py-8 rounded-t-lg shadow-inner mt-12">
+        <div class="container mx-auto px-4 text-center">
+            <p class="mb-4">&copy; 2025 BestDeals-Go. All rights reserved.</p>
+            <nav class="space-x-4">
+                <a href="#about" class="text-gray-300 hover:text-white transition duration-300">About Us</a>
+                <a href="#contact" class="text-gray-300 hover:text-white transition duration-300">Contact</a>
+                <a href="#privacy" class="text-gray-300 hover:text-white transition duration-300">Privacy Policy</a>
+                <!-- You can add Terms of Service here if you create one -->
+                <a href="#" class="text-gray-300 hover:text-white transition duration-300">Terms of Service</a>
+            </nav>
         </div>
-      </div>
-    </section>
+    </footer>
 
-    <section>
-      <h2>Privacy & Policy</h2>
-      <p>
-        We respect your privacy. We do not collect unnecessary user data. Affiliate links are redirected securely through verified CPA networks only. All information is handled according to global data protection standards.
-      </p>
-    </section>
+    <script>
+        // Smooth scroll for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
 
-    <section>
-      <h2>Affiliate Disclosure</h2>
-      <p>
-        This site participates in affiliate marketing programs and may earn commissions on clicks and purchases. All offers featured here are reviewed for legitimacy, and we strictly follow CPA and FTC compliance standards.
-      </p>
-    </section>
-  </div>
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
 
-  <footer>
-    &copy; 2025 BestDeals-Go | Trusted Affiliate Platform | <a href="#">Privacy</a> | <a href="#">Contact</a>
-  </footer>
+        // Mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu when a link is clicked
+        mobileMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+    </script>
+
 </body>
 </html>
