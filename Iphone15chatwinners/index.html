@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat & Win – Test Our New App</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* Custom styles for fonts and general layout */
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&family=Playfair+Display:wght@700;900&display=swap');
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(135deg, #0A0A1A 0%, #1A1A2A 100%); /* Deep, rich dark gradient */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            color: #F0EAD6; /* Creamy white for luxurious feel */
+            padding: 16px; /* Slightly reduced padding on body for very small screens */
+            overflow-x: hidden; /* Prevent horizontal scroll on some animations */
+            position: relative; /* For background animations */
+        }
+
+        /* Subtle Background Animation - More refined blobs */
+        body::before, body::after {
+            content: '';
+            position: absolute;
+            width: 400px;
+            height: 400px;
+            border-radius: 50%;
+            filter: blur(100px); /* More blur */
+            opacity: 0.2; /* Softer opacity */
+            z-index: -1;
+            animation: floatEffect 20s infinite ease-in-out alternate; /* Slower animation */
+        }
+
+        body::before {
+            background-color: #4B0082; /* Deep Indigo */
+            top: 5%;
+            left: 10%;
+        }
+
+        body::after {
+            background-color: #B8860B; /* Dark Goldenrod */
+            bottom: 5%;
+            right: 10%;
+            animation-delay: 7s; /* Stagger animation */
+        }
+
+        @keyframes floatEffect {
+            0% { transform: translate(0, 0) scale(1); }
+            50% { transform: translate(40px, 60px) scale(1.08); } /* Larger movement */
+            100% { transform: translate(0, 0) scale(1); }
+        }
+
+        .container {
+            background-color: rgba(255, 255, 255, 0.03); /* Very subtle transparency */
+            border-radius: 35px; /* Even more pronounced rounded corners */
+            padding: 40px; /* Adjusted padding for better responsiveness */
+            box-shadow: 0 30px 80px rgba(0, 0, 0, 0.95); /* Deeper, more luxurious shadow */
+            text-align: center;
+            max-width: 850px; /* Wider container */
+            width: 100%;
+            border: 1px solid rgba(255, 255, 255, 0.2); /* More visible, refined border */
+            backdrop-filter: blur(15px); /* Stronger frosted glass effect */
+            transition: all 0.4s ease-in-out;
+            transform: translateY(0);
+        }
+
+        .container:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 40px 90px rgba(0, 0, 0, 0.98);
+        }
+
+        /* Headline Styling */
+        h1 {
+            font-family: 'Playfair Display', serif; /* Elegant serif font */
+            font-weight: 900; /* Extra bold for impact */
+            color: #FFD700; /* Classic Gold */
+            text-shadow: 0 0 25px rgba(255, 215, 0, 0.9); /* Richer gold glow */
+            letter-spacing: 0.01em; /* Slightly wider spacing for elegance */
+            line-height: 1.2;
+            font-size: 2.1rem; /* Adjusted: Smaller base font size for mobile headline */
+        }
+
+        .subheadline {
+            font-weight: 300; /* Lighter weight */
+            color: #D4D4D4; /* Soft gray */
+            font-size: 0.95rem; /* Adjusted: Smaller base font size for mobile subheadline */
+            margin-top: 15px;
+        }
+
+        /* iPhone Image */
+        .iphone-image {
+            max-width: 250px; /* Adjusted: Slightly smaller max-width for better mobile fit */
+            height: auto;
+            margin: 30px auto 40px auto; /* More spacing */
+            border-radius: 25px; /* More rounded image */
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.7), 0 0 50px rgba(255, 215, 0, 0.7); /* Deep shadow with golden glow */
+            transform: scale(1) rotateY(0deg);
+            transition: transform 0.4s ease-in-out;
+        }
+
+        .iphone-image:hover {
+            transform: scale(1.05) rotateY(3deg); /* Subtle 3D tilt on hover */
+        }
+
+        /* Steps Section */
+        .steps-section {
+            background-color: rgba(255, 255, 255, 0.05); /* Slightly more opaque step section */
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: inset 0 3px 8px rgba(0, 0, 0, 0.5);
+            padding: 30px; /* Adjusted padding */
+        }
+
+        .steps-list {
+            gap: 15px; /* Adjusted spacing between steps for mobile */
+        }
+
+        .steps-list li {
+            padding: 14px 20px 14px 55px; /* Adjusted: Smaller padding for steps */
+            background-color: rgba(255, 255, 255, 0.07); /* Darker, richer step background */
+            border-radius: 15px; /* More rounded steps */
+            box-shadow: inset 0 2px 6px rgba(0, 0, 0, 0.5);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            color: #E0E7FF;
+            font-size: 0.9rem; /* Adjusted: Smaller base font size for steps */
+        }
+
+        .steps-list li:hover {
+            transform: translateY(-5px); /* More noticeable lift */
+            box-shadow: inset 0 2px 6px rgba(0, 0, 0, 0.6), 0 8px 20px rgba(0, 0, 0, 0.6);
+        }
+
+        .steps-list li::before {
+            width: 34px; /* Adjusted: Smaller number circles for mobile */
+            height: 34px;
+            font-size: 0.95rem; /* Adjusted: Smaller font for numbers */
+            background: linear-gradient(45deg, #B8860B 0%, #DAA520 100%); /* Gold gradient for numbers */
+            border: 3px solid rgba(255, 255, 255, 0.4); /* Thicker white border */
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+            left: 12px; /* Adjusted position */
+        }
+
+        /* CTA Button Styling */
+        .cta-button {
+            background: linear-gradient(90deg, #B8860B 0%, #DAA520 100%); /* Gold gradient */
+            padding: 14px 30px; /* Adjusted: Smaller padding for better mobile touch target, reduced horizontal */
+            border-radius: 60px; /* More extreme pill shape */
+            font-size: 1.15rem; /* Adjusted: Smaller font size */
+            font-weight: 900; /* Ultra bold */
+            text-transform: uppercase;
+            letter-spacing: 1.5px; /* Adjusted: Smaller letter spacing */
+            box-shadow: 0 20px 40px rgba(184, 134, 11, 0.7); /* Stronger gold glow */
+            transition: all 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
+            touch-action: manipulation; /* Improves responsiveness for touch */
+        }
+
+        .cta-button:hover {
+            transform: translateY(-10px); /* Deeper lift */
+            box-shadow: 0 25px 50px rgba(184, 134, 11, 0.9);
+            background: linear-gradient(90deg, #DAA520 0%, #B8860B 100%); /* Reverse gradient on hover */
+        }
+
+        .cta-button::before { /* More prominent shimmer effect */
+            background: linear-gradient(120deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+            animation-duration: 0.8s; /* Faster shimmer */
+        }
+
+        /* Trust Triggers */
+        .trust-trigger-item {
+            background-color: rgba(255, 255, 255, 0.08); /* More refined background */
+            border-radius: 20px; /* More rounded */
+            padding: 12px 18px; /* Adjusted: Smaller padding */
+            box-shadow: inset 0 0 12px rgba(0, 0, 0, 0.5);
+            font-size: 0.95rem; /* Adjusted: Smaller font size */
+            font-weight: 700; /* Bolder text */
+            color: #90EE90; /* Light green for contrast */
+            border: 1px solid rgba(255, 255, 255, 0.15);
+        }
+
+        .trust-trigger-item:hover {
+            transform: scale(1.03);
+            background-color: rgba(255, 255, 255, 0.12);
+        }
+
+        .trust-trigger-item i {
+            margin-right: 8px; /* Adjusted: Smaller margin */
+            font-size: 1.5rem; /* Adjusted: Smaller icon size */
+            color: #6EE7B7; /* Brighter green */
+        }
+
+        /* Input field styling */
+        input[type="tel"] {
+            background-color: rgba(255, 255, 255, 0.08);
+            border: 1px solid rgba(255, 255, 255, 0.25);
+            color: #F0EAD6;
+            padding: 12px 18px; /* Adjusted: Smaller padding */
+            border-radius: 15px; /* More rounded */
+            font-size: 1rem; /* Adjusted: Smaller font size */
+            box-shadow: inset 0 1px 5px rgba(0, 0, 0, 0.4);
+        }
+
+        input[type="tel"]::placeholder {
+            color: #A0AEC0;
+        }
+
+        input[type="tel"]:focus {
+            background-color: rgba(255, 255, 255, 0.12);
+            border-color: #FFD700; /* Gold focus border */
+            box-shadow: 0 0 0 4px rgba(255, 215, 0, 0.4); /* Gold glow on focus */
+        }
+
+        /* Legal Information */
+        .legal-info {
+            background-color: rgba(0, 0, 0, 0.6); /* Deeper, more distinct background */
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5);
+            color: #A0AEC0; /* Softer text color */
+            padding: 18px; /* Adjusted: Smaller padding */
+            font-size: 0.8rem; /* Adjusted: Smaller font size */
+        }
+
+        .legal-info a {
+            color: #DAA520; /* Gold links */
+        }
+
+
+        /* Desktop-specific adjustments */
+        @media (min-width: 769px) { /* Medium screens and up */
+            .container {
+                padding: 50px; /* Larger padding for desktop */
+            }
+            h1 {
+                font-size: 3rem; /* Larger headline on desktop, relative to mobile */
+            }
+            .subheadline {
+                font-size: 1.15rem; /* Larger subheadline on desktop, relative to mobile */
+            }
+            .iphone-image {
+                max-width: 300px; /* Larger image on desktop */
+            }
+            .steps-list {
+                gap: 20px;
+            }
+            .steps-list li {
+                padding: 16px 25px 16px 60px;
+                font-size: 1rem;
+            }
+            .steps-list li::before {
+                width: 36px;
+                height: 36px;
+                font-size: 1.05rem;
+                left: 15px; /* More spacing for number */
+            }
+            .cta-button {
+                padding: 16px 40px;
+                font-size: 1.35rem;
+            }
+            .trust-trigger-item {
+                font-size: 1.05rem;
+                padding: 14px 20px;
+            }
+            .trust-trigger-item i {
+                font-size: 1.6rem;
+            }
+            input[type="tel"] {
+                padding: 14px 20px;
+                font-size: 1.05rem;
+            }
+            .legal-info {
+                padding: 20px;
+                font-size: 0.85rem;
+            }
+        }
+
+        @media (min-width: 1024px) { /* Large screens */
+            h1 {
+                font-size: 3.8rem; /* Even larger headline on large screens */
+            }
+            .subheadline {
+                font-size: 1.3rem; /* Even larger subheadline on large screens */
+            }
+            .iphone-image {
+                max-width: 350px; /* Even larger image on large screens */
+            }
+            .cta-button {
+                font-size: 1.45rem;
+                padding: 18px 45px;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Headline -->
+        <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold mb-4">
+            💬 Help Us Test Our New Chat App – Win a Brand New iPhone!
+        </h1>
+        <!-- Subheadline -->
+        <p class="subheadline text-lg md:text-xl lg:text-2xl mb-8 leading-relaxed">
+            As a thank you for testing, you’re entered to win an iPhone 15. Just verify your mobile number!
+        </p>
+
+        <!-- iPhone Image -->
+        <!-- Consider replacing the placehold.co URL with a high-quality, professional image of an iPhone -->
+        <img src="0628.gif" class="iphone-image block">
+
+
+        <!-- Steps Section -->
+        <div class="steps-section mb-10 p-8 rounded-xl shadow-lg">
+            <h3 class="text-2xl md:text-3xl font-bold mb-6 text-purple-300">Here's How It Works:</h3>
+            <ol class="steps-list mx-auto max-w-lg">
+                <li><span class="font-bold">Enter your mobile number</span> in the field below.</li>
+                <li>
+                    <span class="font-bold">Click the 'Start Chat Test' button below to proceed. You will be redirected to our partner's secure verification page.</span>
+                </li>
+                <li>
+                    <span class="font-bold">Confirm your PIN code</span> on the next page (sent via SMS) to finalize your entry.
+                </li>
+                <li><span class="font-bold">You're in!</span> Wait for the exciting winner results!</li>
+            </ol>
+        </div>
+
+        <!-- Call to Action Section -->
+        <div class="action-section mb-10">
+            <p class="text-xl md:text-2xl font-semibold mb-6 text-indigo-300">
+                Ready to help shape the future of chat and win an iPhone?
+            </p>
+            <!-- Placeholder for Phone Number Input -->
+            <div class="mb-8">
+                <input type="tel" placeholder="Enter your mobile number" class="w-full max-w-sm shadow-inner" aria-label="Enter your mobile number">
+            </div>
+
+            <!-- CTA Button -->
+            <!-- *********************************************************************************** -->
+            <!-- 👉👉👉 PLACE YOUR CPA LINK HERE: Replace "YOUR_CPA_OFFER_URL_HERE" below. 👈👈👈 -->
+            <!-- *********************************************************************************** -->
+            <a id="cta-button" href="YOUR_CPA_OFFER_URL_HERE" class="cta-button text-white no-underline">
+                ✅ Start Chat Test – Enter to Win iPhone
+            </a>
+        </div>
+
+        <!-- Trust Triggers -->
+        <div class="trust-triggers-section mt-12 grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div class="trust-trigger-item">
+                <i class="fab fa-apple text-blue-400"></i>
+                <span>Verified by Apple Beta Program</span>
+            </div>
+            <div class="trust-trigger-item">
+                <i class="fas fa-users text-purple-400"></i>
+                <span>Limited Beta - <span class="font-bold">Only 50 Testers!</span></span>
+            </div>
+        </div>
+
+        <!-- Important Legal Information -->
+        <div class="mt-12 p-6 rounded-lg text-sm text-left leading-relaxed legal-info">
+            <h4 class="font-bold text-red-400 mb-2">Important Legal Information:</h4>
+            <p>This is a promotional offer. By proceeding, you agree to our <a href="#" class="hover:underline">Full Terms & Conditions</a> and <a href="#" class="hover:underline">Privacy Policy</a>.</p>
+            <p class="mt-2">Completing the mobile number verification step grants you <strong>entry into a lucky draw</strong> for an iPhone or a prize of similar value. Not all participants will win, and prizes are subject to availability.</p>
+            <p class="mt-2">Your participation may involve a subscription to a third-party service; please read all terms carefully before confirming your entry.</p>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Ensure the CTA button's href is set correctly (replace the placeholder)
+            const ctaButton = document.getElementById('cta-button');
+            // IMPORTANT: Replace "YOUR_CPA_OFFER_URL_HERE" with your actual CPA offer link.
+            // This link should lead to your PIN confirmation page or directly to the offer.
+            // For example:
+            // ctaButton.href = "https://your-cpa-offer.com/app-beta-verification";
+        });
+    </script>
+</body>
+</html>
