@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get Your Special Offer</title>
+    <!-- Use Tailwind CSS for modern and responsive styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 antialiased">
+
+    <!-- Main Content Container -->
+    <main class="container mx-auto px-4 py-8 max-w-lg">
+        <!-- Card Section -->
+        <div class="bg-white rounded-xl shadow-lg p-6 sm:p-8 text-center border border-gray-200">
+
+            <!-- Header and Image -->
+            <div class="flex flex-col items-center mb-6">
+                <h1 class="text-3xl sm:text-4xl font-bold text-gray-900 mb-2">Exclusive Offer Just For You</h1>
+                <p class="text-lg text-gray-600 mb-4">Complete a quick form to unlock a special deal!</p>
+                <img src="testacolafridge.jpeg" alt="Special offer banner" class="w-full h-auto rounded-lg mb-4 object-cover">
+            </div>
+
+            <!-- Call-to-Action Section -->
+            <div class="space-y-4">
+                <p class="text-gray-700 font-medium">Click below to proceed to the next page and complete your registration.</p>
+
+                <!-- This button will be your Smartlink. Replace the '#' with your actual Smartlink URL. -->
+                <a href="#" id="proceed-button" class="inline-block w-full bg-green-600 text-white font-bold py-4 px-6 rounded-full shadow-lg hover:bg-green-700 transition-colors duration-300 transform hover:scale-105">
+                    <span class="text-lg">Proceed to Signup</span>
+                </a>
+            </div>
+
+            <!-- Disclaimers -->
+            <p class="text-xs text-gray-500 mt-6">
+                <span class="font-semibold">Disclaimer:</span> This is a promotional page and is not a direct offer. By proceeding, you agree to the terms and conditions of the advertiser. All participants must be 18 years or older.
+            </p>
+        </div>
+    </main>
+
+    <!-- Footer Section -->
+    <footer class="text-center py-6 text-gray-500 text-sm">
+        <p>This is a promotional page and is for informational purposes only.</p>
+    </footer>
+
+    <!-- JavaScript to handle click -->
+    <script>
+        // CRITICAL: Replace '#' in the href attribute of the 'a' tag above with your actual Smartlink URL.
+        // Example: <a href="YOUR_SMARTLINK_URL?subid=signup-offer-1" id="proceed-button" ...>
+        
+        // This JavaScript section can be used for simple logging or dynamic URL insertion if needed.
+        const proceedButton = document.getElementById('proceed-button');
+        if (proceedButton) {
+            proceedButton.addEventListener('click', (e) => {
+                console.log('Button clicked. User is being redirected to the signup form.');
+            });
+        }
+    </script>
+</body>
+</html>
