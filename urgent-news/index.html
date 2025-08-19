@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shocking News!</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Inter Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #1f2937; /* Dark background */
+            color: #f3f4f6; /* Light text */
+        }
+    </style>
+</head>
+<body class="bg-gray-900 min-h-screen flex items-center justify-center p-4">
+
+    <div class="bg-gray-800 rounded-xl shadow-2xl p-6 sm:p-10 max-w-lg mx-auto text-center border-t-8 border-red-500 animate-pulse-fast">
+        <!-- Main Heading -->
+        <h1 class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-red-400 mb-4 animate-bounce-short">
+            Urgent News: <br>You'll Be Shocked to See This!
+        </h1>
+
+        <!-- Sub-heading/Intriguing Line -->
+        <p class="text-base sm:text-lg text-gray-300 mb-6 leading-relaxed">
+            This video has been leaked online and is being removed very quickly. This might be your last chance to see it.
+        </p>
+        
+        <!-- Placeholder for a shocking image or a "play" button -->
+        <div class="relative w-full h-48 sm:h-64 rounded-lg overflow-hidden mb-8 shadow-inner">
+            <!-- Replace the image URL with your shocking image -->
+            <img src="https://placehold.co/600x400/000000/FFFFFF?text=ShOcKiNg+ViDeO" alt="Shocking Video Thumbnail" class="absolute inset-0 w-full h-full object-cover">
+            <div class="absolute inset-0 flex items-center justify-center">
+                <svg class="w-16 h-16 text-white bg-black bg-opacity-50 p-2 rounded-full cursor-pointer hover:bg-opacity-75 transition-colors duration-200" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M8 5v14l11-7z"/>
+                </svg>
+            </div>
+        </div>
+
+        <!-- Call-to-Action Button -->
+        <a href="#" id="cta-button" class="inline-block w-full bg-red-600 text-white font-bold py-3 px-6 rounded-full text-lg shadow-lg hover:bg-red-700 transition-all duration-300 transform hover:scale-105 animate-pulse-slow">
+            Click to Watch the Video
+        </a>
+
+        <!-- Warning/Confidentiality Note -->
+        <p class="text-xs text-gray-400 mt-4">
+            **Warning:** This content may be disturbing for some viewers.
+        </p>
+
+    </div>
+
+    <script>
+        // Get the CTA button element
+        const ctaButton = document.getElementById('cta-button');
+
+        // Add a click event listener
+        ctaButton.addEventListener('click', function(event) {
+            // Prevent the default link behavior
+            event.preventDefault();
+
+            // Here you will replace the '#' with your actual DirectLink_1 URL
+            window.location.href = '#';
+        });
+        
+        // Tailwind animations (needs to be in a style tag or a separate CSS file for best practice, but included here for a single file)
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes pulse-fast {
+                0%, 100% {
+                    transform: scale(1);
+                    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+                }
+                50% {
+                    transform: scale(1.01);
+                    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+                }
+            }
+            @keyframes bounce-short {
+                0%, 100% {
+                    transform: translateY(0);
+                }
+                50% {
+                    transform: translateY(-5px);
+                }
+            }
+            .animate-pulse-fast {
+                animation: pulse-fast 1s infinite ease-in-out;
+            }
+            .animate-bounce-short {
+                animation: bounce-short 1.5s infinite ease-in-out;
+            }
+            .animate-pulse-slow {
+                animation: pulse-slow 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+            }
+        `;
+        document.head.appendChild(style);
+    </script>
+</body>
+</html>

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Win Big Today! | Take Our Survey to Enter</title>
+    <!-- Use the Inter font from Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f7f3ff; /* Light, inviting purple-gray */
+        }
+        /* Custom styles for gradients and button effects */
+        .gradient-bg {
+            background: linear-gradient(to right, #ff5722, #ffb300); /* A vibrant orange-yellow gradient */
+        }
+        .btn-primary {
+            transition: transform 0.2s, box-shadow 0.2s, background-color 0.2s;
+        }
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(255, 179, 0, 0.4); /* Yellow shadow */
+        }
+        .card {
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body class="text-gray-800">
+
+    <!-- Main Container -->
+    <div class="container mx-auto px-4 py-8 max-w-7xl">
+
+        <!-- Header/Logo Section -->
+        <header class="flex justify-center items-center py-6 mb-8">
+            <a href="#" class="text-3xl font-bold text-gray-900">
+                <span class="gradient-bg text-transparent bg-clip-text">Win</span><span class="text-gray-800">Swift</span>
+            </a>
+        </header>
+
+        <!-- Hero Section -->
+        <section class="text-center py-20 bg-white rounded-3xl shadow-2xl border border-gray-100">
+            <h1 class="text-4xl sm:text-5xl lg:text-7xl font-extrabold leading-tight mb-4 tracking-tight">
+                Enter to Win a <span class="gradient-bg text-transparent bg-clip-text">$500 Amazon Gift Card!</span>
+            </h1>
+            <p class="text-lg sm:text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
+                Simply take our quick survey to secure your entry in our exclusive prize giveaway.
+            </p>
+            <a href="#claim-offer" class="btn-primary inline-block py-4 px-12 text-lg font-bold text-white rounded-full shadow-lg gradient-bg hover:opacity-90">
+                Click Here to Enter
+            </a>
+            <div class="mt-8 text-sm text-gray-500">
+                <p>Limited-time offer. Winner announced weekly.</p>
+            </div>
+        </section>
+
+        <!-- Trust & Value Proposition Section -->
+        <section class="py-16">
+            <div class="text-center mb-12">
+                <span class="text-orange-500 font-semibold uppercase tracking-wider">How it Works</span>
+                <h2 class="text-4xl font-bold mt-2">Your Chance to Win is Just 3 Steps Away</h2>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-8 text-center">
+
+                <!-- Step 1 -->
+                <div class="bg-white p-8 rounded-2xl shadow-lg card">
+                    <div class="text-5xl text-orange-500 mb-4">
+                        <svg class="h-16 w-16 mx-auto text-orange-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">1. Answer a Few Questions</h3>
+                    <p class="text-gray-600">Quickly complete our short survey with your valuable feedback.</p>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="bg-white p-8 rounded-2xl shadow-lg card">
+                    <div class="text-5xl text-orange-500 mb-4">
+                        <svg class="h-16 w-16 mx-auto text-orange-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c1.657 0 3 .895 3 2s-1.343 2-3 2h-1a2 2 0 00-2 2v2m-2-2h2m-6 0h2m4 0h2m-4 0h2m-4 0h2m-4 0h2m-4 0h2m-4 0h2m-4 0h2"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">2. Enter Your Details</h3>
+                    <p class="text-gray-600">Provide your email to receive important prize notifications.</p>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="bg-white p-8 rounded-2xl shadow-lg card">
+                    <div class="text-5xl text-orange-500 mb-4">
+                        <svg class="h-16 w-16 mx-auto text-orange-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.618 5.618l-1.414 1.414m1.414-1.414L15.204 2.804M16.204 1.804l-2.828 2.828m2.828-2.828L14.204 2.804M12 21a9 9 0 100-18 9 9 0 000 18zM12 12m-2-2a2 2 0 100 4 2 2 0 000-4z"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">3. Confirm Your Entry</h3>
+                    <p class="text-gray-600">That's it! Your name is officially in the drawing for the prize.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Final Call-to-Action Section -->
+        <section id="claim-offer" class="text-center py-16">
+            <h2 class="text-3xl sm:text-4xl font-bold mb-4">Ready for Your Chance to Win?</h2>
+            <p class="text-lg text-gray-600 mb-8">It's fast, free, and your entry is waiting!</p>
+            <div class="max-w-xl mx-auto p-8 bg-white rounded-3xl shadow-2xl border border-gray-100">
+                <form action="#" method="POST" class="space-y-6">
+                    <div>
+                        <input type="email" id="email" name="email" placeholder="Enter Your Email Address" class="w-full px-4 py-3 rounded-xl border-2 border-gray-200 focus:outline-none focus:border-orange-500" required>
+                    </div>
+                    <button type="submit" class="w-full btn-primary py-3 px-6 text-lg font-bold text-white rounded-full shadow-lg gradient-bg hover:opacity-90">
+                        Start Survey and Enter Now
+                    </button>
+                    <p class="text-xs text-gray-500 mt-4">By entering, you agree to our <a href="#" class="text-gray-600 underline">Official Rules</a>.</p>
+                </form>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="text-center text-gray-500 py-8 border-t border-gray-200 mt-8">
+            <p>&copy; 2025 WinSwift. All rights reserved.</p>
+        </footer>
+
+    </div>
+</body>
+</html>

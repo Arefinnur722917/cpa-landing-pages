@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Today's Best E-commerce Deals | Claim Your Discount</title>
+    <!-- Use the Inter font from Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f7fafc; /* A soft, light gray background */
+        }
+        /* Custom styles for gradients and button effects */
+        .gradient-bg {
+            background: linear-gradient(to right, #007bff, #00c6ff); /* Bright blue to light blue */
+        }
+        .btn-primary {
+            transition: transform 0.2s, box-shadow 0.2s, background-color 0.2s;
+        }
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0, 198, 255, 0.4); /* Blue-cyan shadow */
+        }
+        .deal-card {
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .deal-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body class="text-gray-800">
+
+    <!-- Main Container -->
+    <div class="container mx-auto px-4 py-8 max-w-7xl">
+
+        <!-- Header/Logo Section -->
+        <header class="flex justify-center items-center py-6 mb-8">
+            <a href="#" class="text-3xl font-bold text-gray-900">
+                <span class="gradient-bg text-transparent bg-clip-text">Deal</span><span class="text-gray-800">Hunter</span>
+            </a>
+        </header>
+
+        <!-- Hero Section -->
+        <section class="text-center py-20 bg-white rounded-3xl shadow-2xl border border-gray-100">
+            <h1 class="text-4xl sm:text-5xl lg:text-7xl font-extrabold leading-tight mb-4 tracking-tight">
+                Unlock Unbeatable E-commerce <br class="hidden sm:inline">Deals Now!
+            </h1>
+            <p class="text-lg sm:text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
+                Get access to exclusive discounts, limited-time offers, and flash sales from your favorite brands.
+            </p>
+            <a href="#claim-offer" class="btn-primary inline-block py-4 px-12 text-lg font-bold text-white rounded-full shadow-lg gradient-bg hover:opacity-90">
+                Claim Your Deals
+            </a>
+            <div class="mt-8 text-sm text-gray-500">
+                <p>Limited-time access. Don't miss out!</p>
+            </div>
+        </section>
+
+        <!-- Featured Deals Section -->
+        <section class="py-16">
+            <div class="text-center mb-12">
+                <span class="text-blue-500 font-semibold uppercase tracking-wider">Featured Deals</span>
+                <h2 class="text-4xl font-bold mt-2">Today's Hottest Offers</h2>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+                <!-- Deal Card 1 -->
+                <div class="bg-white p-6 rounded-2xl shadow-lg deal-card">
+                    <img src="electronicsdeals.png" alt="Electronics Deal" class="rounded-xl mb-4 w-full h-auto">
+                    <h3 class="text-xl font-semibold mb-2">50% Off Top Electronics</h3>
+                    <p class="text-gray-600 mb-4">Upgrade your gadgets with massive discounts on laptops, headphones, and more.</p>
+                    <a href="#claim-offer" class="text-blue-500 font-semibold hover:underline">Shop Now &rarr;</a>
+                </div>
+
+                <!-- Deal Card 2 -->
+                <div class="bg-white p-6 rounded-2xl shadow-lg deal-card">
+                    <img src="fashionabledeals.png" alt="Fashion Deal" class="rounded-xl mb-4 w-full h-auto">
+                    <h3 class="text-xl font-semibold mb-2">Fashion Flash Sale</h3>
+                    <p class="text-gray-600 mb-4">Revamp your wardrobe with stylish clothes and accessories at an incredible price.</p>
+                    <a href="#claim-offer" class="text-blue-500 font-semibold hover:underline">Shop Now &rarr;</a>
+                </div>
+
+                <!-- Deal Card 3 -->
+                <div class="bg-white p-6 rounded-2xl shadow-lg deal-card">
+                    <img src="homegoodsdeals.png" alt="Home Goods Deal" class="rounded-xl mb-4 w-full h-auto">
+                    <h3 class="text-xl font-semibold mb-2">Home & Kitchen Essentials</h3>
+                    <p class="text-gray-600 mb-4">Discover great deals on cookware, smart home devices, and other must-have items.</p>
+                    <a href="#claim-offer" class="text-blue-500 font-semibold hover:underline">Shop Now &rarr;</a>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Trust Section -->
+        <section class="py-16 bg-gray-100 rounded-3xl shadow-xl">
+            <div class="text-center mb-12">
+                <span class="text-blue-500 font-semibold uppercase tracking-wider">Trusted by Shoppers</span>
+                <h2 class="text-4xl font-bold mt-2">Join Our Community of Savvy Shoppers</h2>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 px-4">
+                <!-- Testimonial 1 -->
+                <div class="bg-white p-8 rounded-2xl shadow-lg">
+                    <p class="text-gray-700 italic mb-4 leading-relaxed">"I've saved hundreds of dollars using this site. It's my go-to for finding the best deals before they sell out. Highly recommend!"</p>
+                    <p class="font-semibold text-gray-900">- Jessica M., Shopper</p>
+                </div>
+                <!-- Testimonial 2 -->
+                <div class="bg-white p-8 rounded-2xl shadow-lg">
+                    <p class="text-gray-700 italic mb-4 leading-relaxed">"This is the best place to find deals on the brands I love. The interface is clean and easy to use. I'm hooked!"</p>
+                    <p class="font-semibold text-gray-900">- Mark S., Student</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Final Call-to-Action Section -->
+        <section id="claim-offer" class="text-center py-16">
+            <h2 class="text-3xl sm:text-4xl font-bold mb-4">Ready to Start Saving?</h2>
+            <p class="text-lg text-gray-600 mb-8">Enter your email below to get instant access to these deals and more!</p>
+            <div class="max-w-xl mx-auto p-8 bg-white rounded-3xl shadow-2xl border border-gray-100">
+                <form action="#" method="POST" class="space-y-6">
+                    <div>
+                        <input type="email" id="email" name="email" placeholder="Your Email Address" class="w-full px-4 py-3 rounded-xl border-2 border-gray-200 focus:outline-none focus:border-blue-500" required>
+                    </div>
+                    <button type="submit" class="w-full btn-primary py-3 px-6 text-lg font-bold text-white rounded-full shadow-lg gradient-bg hover:opacity-90">
+                        Get Instant Access
+                    </button>
+                    <p class="text-xs text-gray-500 mt-4">By clicking "Get Instant Access", you agree to receive email updates.</p>
+                </form>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="text-center text-gray-500 py-8 border-t border-gray-200 mt-8">
+            <p>&copy; 2025 DealHunter. All rights reserved.</p>
+        </footer>
+
+    </div>
+</body>
+</html>

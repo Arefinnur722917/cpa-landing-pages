@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transform Your Business | Revolutionary Software Solution</title>
+    <!-- Use the Inter font from Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f9fafb; /* A very light, warm gray */
+        }
+        /* Custom styles for gradients and button effects */
+        .gradient-bg {
+            background: linear-gradient(to right, #ec4899, #8b5cf6); /* Pink to Purple */
+        }
+        .btn-primary {
+            transition: transform 0.2s, box-shadow 0.2s, background-color 0.2s;
+        }
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(139, 92, 246, 0.4); /* Purple shadow */
+        }
+        .feature-card {
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body class="text-gray-800">
+
+    <!-- Main Container -->
+    <div class="container mx-auto px-4 py-8 max-w-7xl">
+
+        <!-- Header/Logo Section -->
+        <header class="flex justify-between items-center py-6 mb-8">
+            <a href="#" class="text-3xl font-bold text-gray-900">
+                <span class="gradient-bg text-transparent bg-clip-text">Swift</span><span class="text-gray-800">Flow</span>
+            </a>
+            <nav class="hidden md:flex space-x-6">
+                <a href="#" class="text-gray-600 hover:text-purple-500 transition duration-300">Features</a>
+                <a href="#" class="text-gray-600 hover:text-purple-500 transition duration-300">Pricing</a>
+                <a href="#" class="text-gray-600 hover:text-purple-500 transition duration-300">Testimonials</a>
+            </nav>
+        </header>
+
+        <!-- Hero Section -->
+        <section class="text-center py-20 bg-white rounded-3xl shadow-2xl border border-gray-100">
+            <h1 class="text-4xl sm:text-5xl lg:text-7xl font-extrabold leading-tight mb-4 tracking-tight">
+                Achieve More with <br class="hidden sm:inline">Less Effort.
+            </h1>
+            <p class="text-lg sm:text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
+                Discover our all-in-one software designed to automate tasks, boost productivity, and empower your team to succeed.
+            </p>
+            <a href="#claim-offer" class="btn-primary inline-block py-4 px-12 text-lg font-bold text-white rounded-full shadow-lg gradient-bg hover:opacity-90">
+                Get Your Free Trial
+            </a>
+            <div class="mt-8 text-sm text-gray-500">
+                <p>Limited-time offer. No credit card required.</p>
+            </div>
+        </section>
+
+        <!-- Features/Value Proposition Section -->
+        <section class="py-16">
+            <div class="text-center mb-12">
+                <span class="text-purple-500 font-semibold uppercase tracking-wider">Features</span>
+                <h2 class="text-4xl font-bold mt-2">Simplify Your Workflow</h2>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+
+                <!-- Feature 1 -->
+                <div class="bg-white p-8 rounded-2xl shadow-lg feature-card text-center">
+                    <div class="text-5xl text-pink-500 mb-4">
+                        <svg class="h-16 w-16 mx-auto text-pink-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.01 12.01 0 002.944 12c.381 2.915 1.764 5.618 3.922 7.664a11.955 11.955 0 016.155 0c2.158-2.046 3.541-4.749 3.922-7.664a12.01 12.01 0 00-2.316-5.464z"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Automated Tasks</h3>
+                    <p class="text-gray-600">Automate repetitive tasks and free up your team to focus on what truly matters.</p>
+                </div>
+
+                <!-- Feature 2 -->
+                <div class="bg-white p-8 rounded-2xl shadow-lg feature-card text-center">
+                    <div class="text-5xl text-indigo-500 mb-4">
+                        <svg class="h-16 w-16 mx-auto text-indigo-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Powerful Insights</h3>
+                    <p class="text-gray-600">Get powerful insights with our analytics dashboard to make data-driven decisions.</p>
+                </div>
+
+                <!-- Feature 3 -->
+                <div class="bg-white p-8 rounded-2xl shadow-lg feature-card text-center">
+                    <div class="text-5xl text-orange-500 mb-4">
+                        <svg class="h-16 w-16 mx-auto text-orange-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Seamless Integration</h3>
+                    <p class="text-gray-600">Connect with your existing tools and services effortlessly for a unified workflow.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials/Social Proof Section -->
+        <section class="py-16 bg-gray-100 rounded-3xl shadow-xl">
+            <div class="text-center mb-12">
+                <span class="text-purple-500 font-semibold uppercase tracking-wider">Testimonials</span>
+                <h2 class="text-4xl font-bold mt-2">Trusted by Industry Leaders</h2>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 px-4">
+                <!-- Testimonial 1 -->
+                <div class="bg-white p-8 rounded-2xl shadow-lg flex items-start space-x-4">
+                    <img src="https://placehold.co/60x60/d1d5db/374151?text=S.J." alt="Sarah J. profile picture" class="rounded-full">
+                    <div>
+                        <p class="text-gray-700 italic mb-4 leading-relaxed">"SwiftFlow has completely changed how we manage our projects. The time we've saved is unbelievable. It's an indispensable tool for our company!"</p>
+                        <p class="font-semibold text-gray-900">- Sarah J., <span class="text-gray-500">Founder of Innovate Corp</span></p>
+                    </div>
+                </div>
+                <!-- Testimonial 2 -->
+                <div class="bg-white p-8 rounded-2xl shadow-lg flex items-start space-x-4">
+                    <img src="https://placehold.co/60x60/d1d5db/374151?text=A.R." alt="Alex R. profile picture" class="rounded-full">
+                    <div>
+                        <p class="text-gray-700 italic mb-4 leading-relaxed">"The analytics dashboard is a game-changer. We're now making better, faster decisions with real-time data. A must-have for any growing company."</p>
+                        <p class="font-semibold text-gray-900">- Alex R., <span class="text-gray-500">Marketing Director at Growth Inc.</span></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Final Call-to-Action Section -->
+        <section id="claim-offer" class="text-center py-16">
+            <h2 class="text-3xl sm:text-4xl font-bold mb-4">Ready to Transform Your Business?</h2>
+            <p class="text-lg text-gray-600 mb-8">Join thousands of successful businesses leveraging SwiftFlow today.</p>
+            <div class="max-w-xl mx-auto p-8 bg-white rounded-3xl shadow-2xl border border-gray-100">
+                <form action="#" method="POST" class="space-y-6">
+                    <div>
+                        <input type="text" id="name" name="name" placeholder="Your Full Name" class="w-full px-4 py-3 rounded-xl border-2 border-gray-200 focus:outline-none focus:border-purple-500" required>
+                    </div>
+                    <div>
+                        <input type="email" id="email" name="email" placeholder="Your Work Email" class="w-full px-4 py-3 rounded-xl border-2 border-gray-200 focus:outline-none focus:border-purple-500" required>
+                    </div>
+                    <button type="submit" class="w-full btn-primary py-3 px-6 text-lg font-bold text-white rounded-full shadow-lg gradient-bg hover:opacity-90">
+                        Start Your Free Trial
+                    </button>
+                    <p class="text-xs text-gray-500 mt-4">By clicking "Start Your Free Trial", you agree to our Terms of Service.</p>
+                </form>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="text-center text-gray-500 py-8 border-t border-gray-200 mt-8">
+            <p>&copy; 2025 SwiftFlow. All rights reserved.</p>
+        </footer>
+
+    </div>
+</body>
+</html>

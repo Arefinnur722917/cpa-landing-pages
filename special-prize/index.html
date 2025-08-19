@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Congratulations! You've Won!</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Inter Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #1f2937;
+            color: #f3f4f6;
+        }
+    </style>
+</head>
+<body class="bg-gray-900 min-h-screen flex items-center justify-center p-4">
+
+    <div class="bg-gradient-to-br from-yellow-400 to-amber-500 rounded-xl shadow-2xl p-6 sm:p-10 max-w-lg mx-auto text-center border-b-8 border-yellow-700 transform transition-transform duration-500 hover:scale-105">
+        <!-- Main Heading -->
+        <h1 class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-white mb-4 drop-shadow-lg">
+            Congratulations!
+        </h1>
+        <h2 class="text-2xl sm:text-3xl font-bold text-gray-800 mb-6 drop-shadow">
+            You have won a special prize!
+        </h2>
+        
+        <!-- Celebration Image Placeholder -->
+        <div class="mb-8">
+            <svg class="w-24 h-24 mx-auto text-yellow-200 animate-bounce-slow drop-shadow-lg" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 16H8a1 1 0 01-1-1v-4a1 1 0 011-1h3a1 1 0 011 1v4a1 1 0 01-1 1zM16 18h-3a1 1 0 01-1-1v-4a1 1 0 011-1h3a1 1 0 011 1v4a1 1 0 01-1 1zM12 7a2 2 0 110-4 2 2 0 010 4zM8 7a2 2 0 110-4 2 2 0 010 4zM16 7a2 2 0 110-4 2 2 0 010 4z"></path>
+            </svg>
+        </div>
+
+        <!-- Call-to-Action Button -->
+        <a href="#" id="cta-button" class="inline-block w-full bg-gray-800 text-yellow-400 font-bold py-3 px-6 rounded-full text-lg shadow-lg hover:bg-gray-900 transition-all duration-300 transform hover:scale-105">
+            Click Here to Claim Your Prize!
+        </a>
+
+        <!-- Final warning -->
+        <p class="text-xs text-gray-700 mt-4">
+            **Note:** This offer is valid for a limited time only.
+        </p>
+    </div>
+
+    <script>
+        // Get the CTA button element
+        const ctaButton = document.getElementById('cta-button');
+
+        // Add a click event listener
+        ctaButton.addEventListener('click', function(event) {
+            // Prevent the default link behavior
+            event.preventDefault();
+
+            // Here you will replace the '#' with your actual DirectLink_1 URL
+            window.location.href = '#';
+        });
+
+        // Tailwind animations
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes bounce-slow {
+                0%, 100% {
+                    transform: translateY(0);
+                }
+                50% {
+                    transform: translateY(-10px);
+                }
+            }
+            .animate-bounce-slow {
+                animation: bounce-slow 2s infinite ease-in-out;
+            }
+        `;
+        document.head.appendChild(style);
+    </script>
+</body>
+</html>
