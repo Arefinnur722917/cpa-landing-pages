@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>You've Won! Claim Your $1000 Cash App Gift Card</title>
+    <!-- Use Tailwind CSS for a modern, responsive design -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+            /* Added a vibrant background gradient */
+            background: radial-gradient(at top left, #a78bfa, #f472b6, #fb7185);
+            background-attachment: fixed;
+        }
+        /* Custom message box styling to replace alert() */
+        .message-box {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: white;
+            padding: 2rem;
+            border-radius: 1rem;
+            box-shadow: 0 10px 15px rgba(0,0,0,0.1);
+            text-align: center;
+            z-index: 1000;
+        }
+        .message-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.5);
+            z-index: 999;
+        }
+    </style>
+</head>
+<body class="flex flex-col items-center justify-center min-h-screen text-gray-800">
+
+    <!-- Message Box for user feedback -->
+    <div id="message-container"></div>
+
+    <!-- Main Landing Page Content -->
+    <main class="w-full max-w-2xl mx-auto p-4 md:p-8">
+        <div class="bg-white rounded-3xl shadow-2xl p-6 md:p-10 text-center animate-fade-in">
+
+            <!-- Countdown Timer for Urgency -->
+            <div class="bg-pink-600 text-white py-2 px-6 rounded-full text-lg font-bold inline-block mb-4 shadow-lg animate-pulse">
+                Your Offer Expires In: <span id="countdown">00:59:59</span>
+            </div>
+            
+            <!-- Main Headline -->
+            <h1 class="text-3xl md:text-5xl lg:text-6xl font-black text-gray-900 mb-4 leading-tight">
+                <span class="text-transparent bg-clip-text bg-gradient-to-r from-violet-500 to-fuchsia-500">Congratulations!</span> You've Just Won!
+            </h1>
+
+            <!-- Sub-headline -->
+            <p class="text-xl md:text-2xl text-gray-600 mb-8 font-semibold">
+                Claim your exclusive <span class="text-emerald-500 font-extrabold">$1000 Cash App Gift Card</span> now!
+            </p>
+
+            <!-- Gift Card Image with an updated placeholder -->
+            <div class="mb-8">
+                <img src="1000dollargiftcard.png" 
+                     alt="A vibrant green placeholder for a Cash App gift card" 
+                     class="mx-auto w-full max-w-md rounded-2xl shadow-xl transform transition-transform duration-300 hover:scale-105">
+            </div>
+
+            <!-- Call-to-Action Link with CPA URL and smaller size -->
+            <!-- The button is now an anchor tag to direct the user to the CPA link. -->
+            <a href="https://your-cpa-link-here.com" class="block max-w-sm mx-auto py-3 px-8 rounded-full text-xl font-black text-white bg-gradient-to-r from-green-400 to-lime-500 hover:from-green-500 hover:to-lime-600 transition-all duration-300 transform hover:scale-105 shadow-xl ring-4 ring-green-300 ring-offset-4 ring-offset-white text-center no-underline" target="_blank" rel="noopener noreferrer">
+                CLAIM MY GIFT CARD NOW!
+            </a>
+
+            <!-- Social Proof / Urgency Counter -->
+            <div class="mt-8 text-center text-sm text-gray-500">
+                <p class="font-bold text-gray-700">
+                    <span id="counter" class="text-emerald-500 font-extrabold text-2xl">2,345</span> people have claimed this offer today!
+                </p>
+            </div>
+        </div>
+
+        <!-- How It Works Section -->
+        <div class="mt-12 text-center text-gray-500 text-sm md:text-base">
+            <h3 class="text-xl font-bold text-gray-700 mb-2">How It Works</h3>
+            <p>1. Click the button to check if you qualify.</p>
+            <p>2. Complete a short, simple survey.</p>
+            <p>3. Receive your digital gift card instantly!</p>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="mt-8 mb-4 text-xs text-gray-400 text-center">
+        <p>&copy; 2025 Cash App Rewards. All rights reserved. <a href="#" class="underline hover:text-gray-600">Terms & Conditions</a></p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const countdownEl = document.getElementById('countdown');
+            const counterEl = document.getElementById('counter');
+            const messageContainer = document.getElementById('message-container');
+
+            // Set the countdown time in seconds (59 minutes and 59 seconds)
+            let timeLeft = 3599; 
+            let counterValue = 2345;
+            let interval;
+            let counterInterval;
+
+            // Start the countdown timer
+            function startCountdown() {
+                interval = setInterval(() => {
+                    timeLeft--;
+                    const hours = Math.floor(timeLeft / 3600);
+                    const minutes = Math.floor((timeLeft % 3600) / 60);
+                    const seconds = timeLeft % 60;
+
+                    // Update the display with HH:MM:SS format
+                    countdownEl.textContent = `${String(hours).padStart(2, '0')}:${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}`;
+                    
+                    if (timeLeft <= 0) {
+                        clearInterval(interval);
+                        countdownEl.textContent = "00:00:00";
+                        showCustomMessage("Oops! This offer has expired.", "bg-pink-600");
+                    }
+                }, 1000);
+            }
+
+            // Animate the fake counter
+            function startCounter() {
+                counterInterval = setInterval(() => {
+                    const randomIncrement = Math.floor(Math.random() * 5) + 1;
+                    counterValue += randomIncrement;
+                    counterEl.textContent = new Intl.NumberFormat().format(counterValue);
+                }, 2000);
+            }
+
+            // Custom message box function
+            function showCustomMessage(message, bgColorClass) {
+                const overlay = document.createElement('div');
+                overlay.className = 'message-overlay';
+                const messageBox = document.createElement('div');
+                messageBox.className = `message-box ${bgColorClass} text-white font-bold`;
+                messageBox.innerHTML = `
+                    <p>${message}</p>
+                    <button onclick="closeCustomMessage()" class="mt-4 px-6 py-2 bg-white text-gray-800 rounded-full font-semibold shadow-lg hover:bg-gray-200">OK</button>
+                `;
+                messageContainer.appendChild(overlay);
+                messageContainer.appendChild(messageBox);
+            }
+
+            // Close the custom message box
+            window.closeCustomMessage = function() {
+                messageContainer.innerHTML = '';
+            }
+
+            // Start the timer and counter on page load
+            startCountdown();
+            startCounter();
+        });
+    </script>
+
+</body>
+</html>
